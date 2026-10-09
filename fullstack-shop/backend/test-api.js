@@ -3,8 +3,12 @@ const path = require('path');
 const fs = require('fs').promises;
 
 const DATA_FILE = path.join(__dirname, 'data.json');
+const BACKUP_FILE = path.join(__dirname, '.data.test-backup.json');
 
 async function runTests() {
+  const originalData = await fs.readFile(DATA_FILE, 'utf8').catch(() => null);
+  if (originalData) await fs.writeFile(BACKUP_FILE, originalData);
+
   // Reset test data
   const testData = {
     products: [
@@ -84,6 +88,10 @@ async function runTests() {
     console.log('ALL ADVANCED BACKEND TESTS PASSED!');
   } finally {
     child.kill('SIGKILL');
+    if (originalData) {
+      await fs.writeFile(DATA_FILE, originalData);
+      await fs.rm(BACKUP_FILE, { force: true });
+    }
   }
 }
 

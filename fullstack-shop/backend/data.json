@@ -1,9 +1,40 @@
 {
   "products": [
     {
-      "id": 101,
-      "name": "Sản phẩm test",
-      "price": 100000
+      "id": 1,
+      "name": "Áo thun basic",
+      "price": 150000,
+      "category": "Áo"
+    },
+    {
+      "id": 2,
+      "name": "Quần jeans slim",
+      "price": 450000,
+      "category": "Quần"
+    },
+    {
+      "id": 3,
+      "name": "Áo sơ mi linen",
+      "price": 320000,
+      "category": "Áo"
+    },
+    {
+      "id": 4,
+      "name": "Túi tote canvas",
+      "price": 180000,
+      "category": "Phụ kiện"
+    },
+    {
+      "id": 5,
+      "name": "Áo khoác daily",
+      "price": 590000,
+      "category": "Áo khoác"
+    },
+    {
+      "id": 6,
+      "name": "Nón canvas",
+      "price": 210000,
+      "category": "Phụ kiện"
     }
   ],
   "cart": [],
