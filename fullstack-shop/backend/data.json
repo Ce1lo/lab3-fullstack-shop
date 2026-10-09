@@ -1,0 +1,11 @@
+{
+  "products": [
+    {
+      "id": 101,
+      "name": "Sản phẩm test",
+      "price": 100000
+    }
+  ],
+  "cart": [],
+  "orders": []
+}
